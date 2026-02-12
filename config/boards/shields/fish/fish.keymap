@@ -1,3 +1,4 @@
+// デフォルトキーマップ（大西配列、Win優先、JIS方式）
 // キーマップを更新する方法は https://o24.works/fish/guide を参照
 // 視覚的に編集するには https://o24.works/fish/editor を参照
 
@@ -5,9 +6,10 @@
 // 定義を呼んでくる
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
-
+#include <dt-bindings/zmk/pointing.h>
 
 
 // 特殊入力の挙動を調整できる
@@ -97,7 +99,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        layer_keymap {
+        layer_base {
             bindings = <
                         &kp L       &kp U       &kp F       &kp MINUS           &kp K       &kp W       &kp R       &kp Y       
 &kp Q       &kp E       &mt LGUI I  &mt LALT A  &mt LSHFT O &kp COMMA           &kp G       &mt RSHFT T &mt RALT N  &mt RGUI S  &kp H       &kp P       
@@ -162,27 +164,27 @@
 
         layer_extra_1 {
             bindings = <
-                        &none       &none       &none       &none               &none       &none       &none       &none       
-&none       &none       &none       &none       &none       &none               &none       &none       &none       &none       &none       &none       
-            &none       &none       &none       &none                                       &none       &none       &none       &none       
+                        &none       &none       &none       &none               &none       &none       &none       &none
+&none       &none       &none       &none       &none       &none               &none       &none       &none       &none       &none       &none 
+            &none       &none       &none       &none                                       &none       &none       &none       &none
                                                 &none       &none               &none       &none       
             >;
         };
 
         layer_extra_2 {
             bindings = <
-                        &none       &none       &none       &none               &none       &none       &none       &none       
-&none       &none       &none       &none       &none       &none               &none       &none       &none       &none       &none       &none       
-            &none       &none       &none       &none                                       &none       &none       &none       &none       
+                        &none       &none       &none       &none               &none       &none       &none       &none
+&none       &none       &none       &none       &none       &none               &none       &none       &none       &none       &none       &none 
+            &none       &none       &none       &none                                       &none       &none       &none       &none
                                                 &none       &none               &none       &none       
             >;
         };
 
         layer_extra_3 {
             bindings = <
-                        &none       &none       &none       &none               &none       &none       &none       &none       
-&none       &none       &none       &none       &none       &none               &none       &none       &none       &none       &none       &none       
-            &none       &none       &none       &none                                       &none       &none       &none       &none       
+                        &none       &none       &none       &none               &none       &none       &none       &none
+&none       &none       &none       &none       &none       &none               &none       &none       &none       &none       &none       &none 
+            &none       &none       &none       &none                                       &none       &none       &none       &none
                                                 &none       &none               &none       &none       
             >;
         };
