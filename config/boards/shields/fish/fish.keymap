@@ -1,4 +1,3 @@
-// デフォルトキーマップ（大西配列、Win優先、JIS方式）
 // キーマップを更新する方法は https://o24.works/fish/guide を参照
 // 視覚的に編集するには https://o24.works/fish/editor を参照
 
@@ -52,6 +51,7 @@
     conditional_layers {
     };
 
+
     // 複数キーの同時押しに特別の入力を設定できる
     // キー番号早見表：
     //       0  1  2  3     4  5  6  7
@@ -65,13 +65,13 @@
         require-prior-idle-ms = <150>;
 
         combo_lang2 {
-            key-positions = <21 22>;
-            bindings = <&kp CAPS>;
+            key-positions = <11 12>;
+            bindings = <&kp LANG2>;
         };
 
         combo_lang1 {
-            key-positions = <25 26>;
-            bindings = <&kp INT2>;
+            key-positions = <15 16>;
+            bindings = <&kp LANG1>;
         };
 
         combo_reset_L {
@@ -98,7 +98,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        layer_base {
+        layer_keymap {
             bindings = <
                         &kp L       &kp U       &kp F       &kp MINUS           &kp K       &kp W       &kp R       &kp Y       
 &kp Q       &kp E       &mt LGUI I  &mt LALT A  &mt LSHFT O &kp COMMA           &kp G       &mt RSHFT T &mt RALT N  &mt RGUI S  &kp H       &kp P       
@@ -161,16 +161,31 @@
             >;
         };
 
-        extra1 {
-            status = "reserved";
+        layer_extra_1 {
+            bindings = <
+                        &none       &none       &none       &none               &none       &none       &none       &none       
+&none       &none       &none       &none       &none       &none               &none       &none       &none       &none       &none       &none       
+            &none       &none       &none       &none                                       &none       &none       &none       &none       
+                                                &none       &none               &none       &none       
+            >;
         };
 
-        extra2 {
-            status = "reserved";
+        layer_extra_2 {
+            bindings = <
+                        &none       &none       &none       &none               &none       &none       &none       &none       
+&none       &none       &none       &none       &none       &none               &none       &none       &none       &none       &none       &none       
+            &none       &none       &none       &none                                       &none       &none       &none       &none       
+                                                &none       &none               &none       &none       
+            >;
         };
 
-        extra3 {
-            status = "reserved";
+        layer_extra_3 {
+            bindings = <
+                        &none       &none       &none       &none               &none       &none       &none       &none       
+&none       &none       &none       &none       &none       &none               &none       &none       &none       &none       &none       &none       
+            &none       &none       &none       &none                                       &none       &none       &none       &none       
+                                                &none       &none               &none       &none       
+            >;
         };
     };
 };
